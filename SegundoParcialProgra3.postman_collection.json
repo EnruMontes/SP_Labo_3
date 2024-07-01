@@ -1,0 +1,400 @@
+{
+	"info": {
+		"_postman_id": "ac03a614-a5eb-44a3-aa2e-f269036d9bcd",
+		"name": "SegundoParcialProgra3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26834339"
+	},
+	"item": [
+		{
+			"name": "Consultas",
+			"item": [
+				{
+					"name": "Ventas un Dia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:777/ventas/consultar/productos/vendidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "777",
+							"path": [
+								"ventas",
+								"consultar",
+								"productos",
+								"vendidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ventas por Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:777/ventas/consultar/ventas/porUsuario?email=jose@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "777",
+							"path": [
+								"ventas",
+								"consultar",
+								"ventas",
+								"porUsuario"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "jose@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ventas por Producto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:777/ventas/consultar/ventas/porProducto?tipo=Pantalon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "777",
+							"path": [
+								"ventas",
+								"consultar",
+								"ventas",
+								"porProducto"
+							],
+							"query": [
+								{
+									"key": "tipo",
+									"value": "Pantalon"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ventas entre Valores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:777/ventas/consultar/productos/entreValores?valor1=2000&valor2=4000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "777",
+							"path": [
+								"ventas",
+								"consultar",
+								"productos",
+								"entreValores"
+							],
+							"query": [
+								{
+									"key": "valor1",
+									"value": "2000"
+								},
+								{
+									"key": "valor2",
+									"value": "4000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ventas Ingresos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:777/ventas/consultar/ventas/ingresos?dia=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "777",
+							"path": [
+								"ventas",
+								"consultar",
+								"ventas",
+								"ingresos"
+							],
+							"query": [
+								{
+									"key": "dia",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Producto mas Vendido",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:777/ventas/consultar/productos/masVendido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "777",
+							"path": [
+								"ventas",
+								"consultar",
+								"productos",
+								"masVendido"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Alta Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Adidas",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "4000",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "Pantalon",
+							"type": "text"
+						},
+						{
+							"key": "talla",
+							"value": "L",
+							"type": "text"
+						},
+						{
+							"key": "color",
+							"value": "azul",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/E:/Users/Enru/Downloads/OneDrive/Imágenes/Drake-8.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:777/tienda/alta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "777",
+					"path": [
+						"tienda",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Nike",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "Camiseta",
+							"type": "text"
+						},
+						{
+							"key": "color",
+							"value": "negra",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:777/tienda/consultar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "777",
+					"path": [
+						"tienda",
+						"consultar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta Venta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "asdasd@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Adidas",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "Pantalon",
+							"type": "text"
+						},
+						{
+							"key": "talla",
+							"value": "L",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "nroPedido",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "5000",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/E:/Users/Enru/Downloads/OneDrive/Imágenes/Levileche.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:777/ventas/alta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "777",
+					"path": [
+						"ventas",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Venta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nroPedido",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "asddd@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Adidas",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "Pantalon",
+							"type": "text"
+						},
+						{
+							"key": "talla",
+							"value": "L",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "5500",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:777/ventas/modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "777",
+					"path": [
+						"ventas",
+						"modificar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
