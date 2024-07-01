@@ -22,9 +22,28 @@ class ProductoController extends Producto
         $producto->talla = $talla;
         $producto->color = $color;
         $producto->stock = $stock;
-        $producto->crearProducto();
 
-        $payload = json_encode(array("mensaje" => "Producto creado con exito"));
+        if($producto->crearProducto() != null)
+        {
+          $payload = json_encode(array("mensaje" => "Producto creado con exito"));
+          
+          $archivo = isset($_FILES['foto']) ? $_FILES['foto'] : null;
+          $tempFilePath = $archivo['tmp_name']; // Ruta temporal del archivo
+          
+          $guardadoImagen = Producto::guardarImagenProducto("ImagenesDeRopa/2024/", $producto->nombre, $producto->tipo, $tempFilePath);
+          if($guardadoImagen != false)
+          {
+            $payload = json_encode(array("mensaje" => "Producto e imagen creado con exito"));
+          }
+          else
+          {
+            $payload = json_encode(array("mensaje" => "Se cargo el producto pero hubo un error al cargar la imagen"));
+          }
+        }
+        else
+        {
+          $payload = json_encode(array("mensaje" => "No se pudo cargar el producto"));
+        }
 
         $response->getBody()->write($payload);
         return $response

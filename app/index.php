@@ -39,6 +39,15 @@ $app->group('/tienda', function (RouteCollectorProxy $group) {
 });
 
 $app->group('/ventas', function (RouteCollectorProxy $group) {
+  $group->group('/consultar', function (RouteCollectorProxy $groupConsultar) {
+      $groupConsultar->get('/productos/vendidos', \VentasController::class . ':TraerVentasDia');
+      $groupConsultar->get('/ventas/porUsuario', \VentasController::class . ':TraerVentasPorUsuario');
+      $groupConsultar->get('/ventas/porProducto', \VentasController::class . ':TraerVentasPorProducto');
+      $groupConsultar->get('/productos/entreValores', \VentasController::class . ':TraerVentasEntreValores');
+      $groupConsultar->get('/ventas/ingresos', \VentasController::class . ':TraerVentasPorIngresos');
+      $groupConsultar->get('/productos/masVendido', \VentasController::class . ':TraerProductoMasVendido');
+  });
+
   $group->post('/alta', \VentasController::class . ':CargarUna')->add(\TiendaMiddleware::class . ':ExisteStock');
   $group->put('/modificar', \VentasController::class . ':ModificarUna');
 });

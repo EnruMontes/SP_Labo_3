@@ -33,6 +33,7 @@ class Producto
             $this->actualizarProducto();
             $rta = $objAccesoDatos->obtenerUltimoId();
         }
+
         return $rta;
 
     }
@@ -65,6 +66,19 @@ class Producto
         $consulta->bindValue(':nombre', $this->nombre, PDO::PARAM_STR);
         $consulta->bindValue(':tipo', $this->tipo, PDO::PARAM_STR);
         $consulta->execute();
+    }
+
+    public static function guardarImagenProducto($path, $nombre, $tipo, $tempName)
+    {
+        $rta = false;
+        // Ruta a donde se quiere mover el archivo
+        $destino = $path . $nombre . " - " . $tipo . ".png";
+        
+        if(move_uploaded_file($tempName, $destino))
+        {
+            $rta = true;
+        }
+        return $rta;
     }
 
     public static function obtenerStock($nombre, $tipo)
