@@ -162,4 +162,35 @@ class VentasController extends Venta
         return $response
           ->withHeader('Content-Type', 'application/json');
     }
+
+    public function GuardarCSV($request, $response, $args) // GET
+    {
+      $nombreArchivo = "ventas.csv";
+
+      if($archivo = fopen($nombreArchivo, "w"))
+      {
+        // fputcsv($archivo, ['id', 'estado']);
+        $lista = Venta::obtenerTodos();
+        foreach( $lista as $venta )
+        {
+          fputcsv($archivo, [$venta->id, $venta->email, $venta->nombre, $venta->tipo, $venta->talla, $venta->stock, $venta->fecha, $venta->nroPedido, $venta->precio]);
+        }
+        fclose($archivo);
+
+        // Leer el archivo CSV recién creado
+        $csvContent = file_get_contents($nombreArchivo);
+
+        // Establecer la respuesta con el contenido del archivo CSV
+        $response->getBody()->write($csvContent);
+        return $response
+            ->withHeader('Content-Type', 'text/csv')
+            ->withHeader('Content-Disposition', 'attachment; filename=' . $nombreArchivo);
+      }
+      else
+      {
+        $payload =  json_encode(array("mensaje" => "No se pudo abrir el archivo"));
+        $response->getBody()->write($payload);
+        return $response->withHeader('Content-Type', 'application/json');
+      }
+    }
 }

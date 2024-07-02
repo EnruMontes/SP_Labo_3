@@ -12,6 +12,16 @@
 				{
 					"name": "Ventas un Dia",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTk4NzU3OTUsImV4cCI6MTcxOTkzNTc5NSwiYXVkIjoiYWFiZWY2YzFmOGYzMzZlMzUyOWM0YzFjZTQwYWVmMGU1ZjQ3MzRiNyIsImRhdGEiOnsiaWRVc3VhcmlvIjozLCJwZXJmaWwiOiJlbXBsZWFkbyIsInVzdWFyaW8iOiJqb3NlIiwiY29udHJzZW5pYSI6Ikpvc2UxMjMifSwiYXBwIjoiU2VndW5kb19QYXJjaWFsIn0.IXFySVure-E1T9UjYeLd6GXcCqeIpz9BXc8zfi_5vpk",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -34,6 +44,16 @@
 				{
 					"name": "Ventas por Usuario",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTk4NzgxOTAsImV4cCI6MTcxOTkzODE5MCwiYXVkIjoiYWFiZWY2YzFmOGYzMzZlMzUyOWM0YzFjZTQwYWVmMGU1ZjQ3MzRiNyIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJwZXJmaWwiOiJhZG1pbiIsInVzdWFyaW8iOiJlbnJpY28iLCJjb250cnNlbmlhIjoiRW5ydTEyMyJ9LCJhcHAiOiJTZWd1bmRvX1BhcmNpYWwifQ.RCighY3VKua15kfQIi0gNolEW_tRBwA1GqVgQ5uiW90",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -62,6 +82,16 @@
 				{
 					"name": "Ventas por Producto",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTk4NzgxOTAsImV4cCI6MTcxOTkzODE5MCwiYXVkIjoiYWFiZWY2YzFmOGYzMzZlMzUyOWM0YzFjZTQwYWVmMGU1ZjQ3MzRiNyIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJwZXJmaWwiOiJhZG1pbiIsInVzdWFyaW8iOiJlbnJpY28iLCJjb250cnNlbmlhIjoiRW5ydTEyMyJ9LCJhcHAiOiJTZWd1bmRvX1BhcmNpYWwifQ.RCighY3VKua15kfQIi0gNolEW_tRBwA1GqVgQ5uiW90",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -90,6 +120,16 @@
 				{
 					"name": "Ventas entre Valores",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTk4ODM2NjksImV4cCI6MTcxOTk0MzY2OSwiYXVkIjoiYWFiZWY2YzFmOGYzMzZlMzUyOWM0YzFjZTQwYWVmMGU1ZjQ3MzRiNyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1LCJwZXJmaWwiOiJhZG1pbiIsInVzdWFyaW8iOiJhZ3VzdGluIiwiY29udHJzZW5pYSI6IkFndXN0aW4xMjMifSwiYXBwIjoiU2VndW5kb19QYXJjaWFsIn0.fx1PKmmePF_s1UlwP1Y_XiBwTpn3YBvl_D1Tcr9bwA0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -150,6 +190,16 @@
 				{
 					"name": "Producto mas Vendido",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTk4ODM2NjksImV4cCI6MTcxOTk0MzY2OSwiYXVkIjoiYWFiZWY2YzFmOGYzMzZlMzUyOWM0YzFjZTQwYWVmMGU1ZjQ3MzRiNyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1LCJwZXJmaWwiOiJhZG1pbiIsInVzdWFyaW8iOiJhZ3VzdGluIiwiY29udHJzZW5pYSI6IkFndXN0aW4xMjMifSwiYXBwIjoiU2VndW5kb19QYXJjaWFsIn0.fx1PKmmePF_s1UlwP1Y_XiBwTpn3YBvl_D1Tcr9bwA0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -174,6 +224,16 @@
 		{
 			"name": "Alta Producto",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTk4NzQ2NjYsImV4cCI6MTcxOTkzNDY2NiwiYXVkIjoiYWFiZWY2YzFmOGYzMzZlMzUyOWM0YzFjZTQwYWVmMGU1ZjQ3MzRiNyIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJwZXJmaWwiOiJhZG1pbiIsInVzdWFyaW8iOiJlbnJpY28iLCJjb250cnNlbmlhIjoiRW5ydTEyMyJ9LCJhcHAiOiJTZWd1bmRvX1BhcmNpYWwifQ.lUOrsFNpBeG2PPwmCcVPOklY08DKhUzaANBotT31BjY",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -311,13 +371,13 @@
 						},
 						{
 							"key": "precio",
-							"value": "5000",
+							"value": "7000",
 							"type": "text"
 						},
 						{
 							"key": "foto",
 							"type": "file",
-							"src": "/E:/Users/Enru/Downloads/OneDrive/Imágenes/Levileche.jpg"
+							"src": "/E:/Users/Enru/Downloads/OneDrive/Imágenes/HasbuConLaDeBoca.jpg"
 						}
 					]
 				},
@@ -391,6 +451,209 @@
 					"path": [
 						"ventas",
 						"modificar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mail",
+							"value": "agustin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "usuario",
+							"value": "agustin",
+							"type": "text"
+						},
+						{
+							"key": "contrasenia",
+							"value": "Agustin123",
+							"type": "text"
+						},
+						{
+							"key": "perfil",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/E:/Users/Enru/Downloads/OneDrive/Imágenes/Myke Toweras.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:777/registro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "777",
+					"path": [
+						"registro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Usuario Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "usuario",
+							"value": "agustin",
+							"type": "text"
+						},
+						{
+							"key": "perfil",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "contrasenia",
+							"value": "Agustin123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:777/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "777",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Usuario Empleado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "usuario",
+							"value": "jose",
+							"type": "text"
+						},
+						{
+							"key": "perfil",
+							"value": "empleado",
+							"type": "text"
+						},
+						{
+							"key": "contrasenia",
+							"value": "Jose123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:777/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "777",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Usuario Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "usuario",
+							"value": "martin",
+							"type": "text"
+						},
+						{
+							"key": "perfil",
+							"value": "cliente",
+							"type": "text"
+						},
+						{
+							"key": "contrasenia",
+							"value": "Martin123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:777/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "777",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Descargar Ventas CSV",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTk4ODM2NjksImV4cCI6MTcxOTk0MzY2OSwiYXVkIjoiYWFiZWY2YzFmOGYzMzZlMzUyOWM0YzFjZTQwYWVmMGU1ZjQ3MzRiNyIsImRhdGEiOnsiaWRVc3VhcmlvIjo1LCJwZXJmaWwiOiJhZG1pbiIsInVzdWFyaW8iOiJhZ3VzdGluIiwiY29udHJzZW5pYSI6IkFndXN0aW4xMjMifSwiYXBwIjoiU2VndW5kb19QYXJjaWFsIn0.fx1PKmmePF_s1UlwP1Y_XiBwTpn3YBvl_D1Tcr9bwA0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:777/ventas/descargar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "777",
+					"path": [
+						"ventas",
+						"descargar"
 					]
 				}
 			},

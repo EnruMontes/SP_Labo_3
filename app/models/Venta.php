@@ -179,4 +179,14 @@ class Venta
 
         return $consulta->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public static function obtenerTodos()
+    {
+        $objAccesoDatos = AccesoDatos::obtenerInstancia();
+        $consulta = $objAccesoDatos->prepararConsulta("SELECT * FROM ventas");
+        $consulta->execute();
+
+        return $consulta->fetchAll(PDO::FETCH_CLASS, 'Venta');
+    }
+
 }
